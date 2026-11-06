@@ -1,11 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const { randomBytes } = require('crypto');
+const { randomBytes } = require('node:crypto');
 const cors = require('cors');
 
 const app = express();
+app.disable('x-powered-by');
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({ origin: 'http://localhost:3000' }));
 
 const posts = {};
 
