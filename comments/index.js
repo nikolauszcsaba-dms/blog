@@ -1,7 +1,7 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const { randomBytes } = require('node:crypto');
-const cors = require('cors');
+import express from 'express';
+import bodyParser from 'body-parser';
+import { randomBytes } from 'node:crypto';
+import cors from 'cors';
 
 const app = express();
 app.disable('x-powered-by');
